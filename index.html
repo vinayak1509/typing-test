@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Typing App</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header class="site-header">
+      <h1>Typing App</h1>
+      <p class="subtitle">Improve speed and accuracy — responsive for all screens</p>
+    </header>
+
+    <main class="main-grid">
+      <section class="card test-area">
+        <div class="controls">
+          <label class="label-inline">Mode:
+            <select id="mode" aria-label="mode select">
+              <option value="time" selected>Time — 30s</option>
+              <option value="words">Words — 25 words</option>
+            </select>
+          </label>
+          <button id="startBtn" class="btn primary">Start</button>
+          <button id="resetBtn" class="btn">Reset</button>
+        </div>
+
+        <div id="quote" class="quote" aria-live="polite">Click Start to begin...</div>
+
+        <textarea id="input" class="input" placeholder="Start typing here..." aria-label="typing input" disabled></textarea>
+
+        <div class="stats">
+          <div class="stat">Time: <span id="time">30</span>s</div>
+          <div class="stat">WPM: <span id="wpm">0</span></div>
+          <div class="stat">Accuracy: <span id="accuracy">100</span>%</div>
+          <div class="stat">Errors: <span id="errors">0</span></div>
+        </div>
+      </section>
+
+      <aside class="card settings">
+        <h2>Passages</h2>
+        <div id="passages" class="passages" role="list"></div>
+        <label for="custom" class="label-block">Or paste your own text</label>
+        <textarea id="custom" class="custom" placeholder="Paste custom passage and press Start"></textarea>
+      </aside>
+    </main>
+
+    <footer class="site-footer">Made with ♥ — Responsive typing trainer</footer>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
